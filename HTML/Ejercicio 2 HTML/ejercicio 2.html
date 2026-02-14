@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        header {
+            background-color: black;
+            
+            height: 30px;
+        }
+        #título{
+            color: orange;
+        }
+        section{
+            display: flex;
+        }
+        aside{
+            background-color: gray;
+            float: left;
+            width: 30%;
+        }
+        aside a {
+            color: rgb(200, 227, 194);
+        }
+        article img {
+            margin: 8px auto;
+        }
+        article{
+            background-color: lightgray;
+            float: left;
+            width: 70%;
+        }
+        footer{
+            background-color: rgba(128, 128, 128, 0.552);
+            float: left;
+            height: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p id="título">Diseño HTML/CSS fluido.</p>
+    </header>
+    
+    <section>
+        <aside>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+                <li><a href="#">Enlace 5</a></li>
+            </ul>
+
+        </aside>
+        <article>
+            <h1 style="color: rgb(7, 7, 178);">Ejemplo: Diseño fluido con dos columnas</h1>
+            <p>Al cambiar la anchura de la ventanna del navegador donde se este visualizando esta pagina web, los tamaños de las diferentes areas de la pagina se redimensionan</p>
+            <img src="abrirllaveImg.png" alt="Descripción de la imagen" style="width: 50%;">
+            <p>Observese que, la imagen tambien se redimensiona</p>
+        </article>
+    </section>
+
+    <footer>
+        <p style="color: rgba(155, 10, 10, 0.835);">Ejemplo del <a href="" style="color: rgb(200, 227, 194);">Tutorial de HTML</a> de AbrirLlave</p>
+    </footer>
+</body>
+</html>
