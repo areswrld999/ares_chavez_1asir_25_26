@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felis Silvestris Catus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #e8907a;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      padding: 20px;
+    }
+
+    /* ── PÁGINA PRINCIPAL ── */
+    .pagina {
+      background-color: #e8907a;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* ── CABECERA ── */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 3px solid #7a3a20;
+      padding: 6px 12px;
+      background: #f0c8b0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+    }
+
+    header h1 .emoji {
+      font-size: 1.8rem;
+    }
+
+    /* ── SECCIONES GENERALES ── */
+    section {
+      background-color: #f28070;
+      border: 2px solid #c05840;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+    }
+
+    section > h2 {
+      color: #f0e040;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    /* ── INTRODUCCIÓN ── */
+    #introduccion .contenido {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    #introduccion .texto {
+      flex: 1;
+    }
+
+    #introduccion .texto p {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    #introduccion figure {
+      flex-shrink: 0;
+    }
+
+    #introduccion figure img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border: 3px solid #c05840;
+      display: block;
+    }
+
+    /* ── RAZAS ── */
+    #razas {
+      background-color: #f08060;
+    }
+
+    /* Contenedor de todas las razas */
+    #razas .lista-razas {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Tarjeta individual de raza */
+    article.raza {
+      background-color: #f0a088;
+      border: 1px solid #c05840;
+      padding: 12px;
+    }
+
+    article.raza h3 {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    article.raza .raza-contenido {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    article.raza figure img {
+      width: 100px;
+      height: 90px;
+      object-fit: cover;
+      border: 2px solid #c05840;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    article.raza p {
+      flex: 1;
+      line-height: 1.5;
+      color: #f0e8e0;
+    }
+
+    /* Raza sin imagen: texto ocupa todo el ancho */
+    article.raza.sin-imagen p {
+      width: 100%;
+      color: #f0e8e0;
+    }
+
+    /* Imagen al lado derecho */
+    article.raza.imagen-derecha .raza-contenido {
+      flex-direction: row-reverse;
+    }
+
+    /* ── ENLACES ── */
+    a {
+      color: #c83820;
+      text-decoration: underline;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* ── PIE ── */
+    footer {
+      font-size: 0.72rem;
+      color: #5a2010;
+      margin-top: 6px;
+      padding-top: 4px;
+    }
+
+    footer a {
+      color: #c83820;
+    }
+
+    /* ── SMALL-CAPS (lugares) ── */
+    .lugar {
+      font-variant: small-caps;
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+
+    <!-- CABECERA -->
+    <header>
+      <h1>
+        <span class="emoji">🐱</span>
+        FELIS SILVESTRIS CATUS
+        <span class="emoji">🐱</span>
+      </h1>
+    </header>
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <article class="contenido">
+        <div class="texto">
+          <p>
+            El gato (<em><a href="#">Felis silvestris catus</a></em>) es una subespecie de mamífero carnívoro de la familia
+            <a href="#">Felidae</a>. El gato convive con el ser humano al menos desde hace 9500 años. Su nombre deriva del
+            latín <em>catus</em>, palabra que aludía a los gatos salvajes en contraposición a los gatos domésticos que, en
+            latín, eran llamados <em>felis</em>.
+          </p>
+          <p>
+            Los gatos forman una única especie, pero cruzando gatos de características físicas similares se han ido creando
+            «razas» de gatos. En 1887 se fundó en <span class="lugar">Inglaterra</span> el National Cat Club, la primera
+            organización que registró datos sobre gatos para establecer su pedigrí. Actualmente, la Fédération Internationale
+            Féline (FIFe) engloba a 39 organizaciones registradoras de 37 países distintos.
+          </p>
+        </div>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/200px-Cat_November_2010-1a.jpg"
+            alt="Ilustración de un gato doméstico"
+          />
+        </figure>
+      </article>
+    </section>
+
+    <!-- RAZAS -->
+    <section id="razas">
+      <h2>Algunas razas de gatos</h2>
+
+      <div class="lista-razas">
+
+        <!-- Gato siamés -->
+        <article class="raza">
+          <h3>Gato siamés</h3>
+          <div class="raza-contenido">
+            <figure>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/200px-Siam_lilacpoint.jpg"
+                alt="Gato siamés"
+              />
+            </figure>
+            <p>
+              El <em>thai</em>, o <strong><em>gato siamés tradicional</em></strong>, de cabeza redonda, tiene su origen en
+              <span class="lugar">Tailandia</span>. En 1871 fue exhibido por primera vez en el Crystal Palace en Londres.
+              Durante el siglo XX, criadores norteamericanos crearon una nueva raza, de cabeza con forma alargada y triangular,
+              llamada <em>siamés moderno</em>.
+            </p>
+          </div>
+        </article>
+
+        <!-- Gato azul ruso -->
+        <article class="raza sin-imagen">
+          <h3>Gato azul ruso</h3>
+          <div class="raza-contenido">
+            <p>
+              Se dice que el gato <strong><em>Azul Ruso</em></strong> es una raza natural que apareció en los alrededores del
+              puerto de Arkhangelisk en el norte de <span class="lugar">Rusia</span> (por eso también fueron conocidos como
+              gato arcángel). Los primeros ejemplares se mostraron como los gatos de Arcángel en la exposición de gatos en
+              1875 en el Crystal Palace en Londres.
+            </p>
+          </div>
+        </article>
+
+        <!-- Gato de los bosques de Noruega -->
+        <article class="raza imagen-derecha">
+          <h3>Gato de los bosques de Noruega</h3>
+          <div class="raza-contenido">
+            <figure>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Norwegian_Forest_Cat_Bushy_Tail.jpg/200px-Norwegian_Forest_Cat_Bushy_Tail.jpg"
+                alt="Gato de los bosques de Noruega"
+              />
+            </figure>
+            <p>
+              Su origen exacto se desconoce, aunque ya aparecen en una clasificación de 1599 del sacerdote danés Peter Friis.
+              La FIFe reconoció la raza en 1976, utilizando como modelo al gato Paris Truls. En 1992 apareció por primera vez
+              un gato de esta especie de color ámbar, producto de una mutación.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>Basado en datos de <a href="https://es.wikipedia.org/wiki/Gato_dom%C3%A9stico">Wikipedia</a></p>
+      <p>Última modificación: 26 de noviembre de 2023</p>
+    </footer>
+
+  </main>
+</body>
+</html>

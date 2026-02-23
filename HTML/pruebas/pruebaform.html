@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function enviarFormulario() {
+            var nombre = document.getElementById("Nombre").value;
+            document.getElementById("resultado").innerHTML = "Nombre: " + nombre;
+        }
+    </script>
+</head>
+
+
+
+
+
+<body>
+    <form action="registrardatos.php" method="post" onsubmit="enviarFormulario(); return false;">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre" size="20">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <p id="resultado"></p>
+
+    <label for="seleccion">elige un color</label>
+    <select name="Colores" id="seleccion">
+        <option>Rojo</option>
+        <option>Verde</option>
+        <option>Amarillo</option>
+        <option>Azul</option>
+
+    </select>
+
+
+    <form action="registrardatos.php" method="post">
+    <label for="nombre2">Ingrese su nombre: </label>
+        <input type="text" name="nombre" size="20" id="nombre2">
+        <br>
+    <label for="nombre2">Ingrese su clave: </label>
+        <input type="password" name="clave" size="12">
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+</body>
+</html>
