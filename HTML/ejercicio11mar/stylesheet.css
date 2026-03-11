@@ -1,0 +1,8 @@
+header {
+    background-color: yellow;
+    height: 300px;
+}
+
+header img{
+    float: left;
+}
