@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nota1 = parseFloat(prompt()) //parsefloa deja convierte lo que añades en numeros y el flota que permite numeros con decimales
+        let nota2 = parseFloat(prompt())
+        let nota3 = parseFloat(prompt())
+
+        function media (nota1, nota2, nota3){
+            let suma = nota1 + nota2 + nota3
+            let media = (suma) / 3
+            return media
+        }
+
+        function Visualizar (){
+            document.write("La media es: " + media(nota1, nota2, nota3))
+        }
+
+        Visualizar()
+    </script>
+</body>
+</html>
