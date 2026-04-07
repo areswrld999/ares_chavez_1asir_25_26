@@ -7,16 +7,19 @@
 </head>
 <body>
     <script>
+        //PROGRAMA PRINCIPAL
         let nota1 = parseFloat(prompt()) //parsefloa deja convierte lo que añades en numeros y el flota que permite numeros con decimales
         let nota2 = parseFloat(prompt())
         let nota3 = parseFloat(prompt())
 
+        //PROCESO
         function media (nota1, nota2, nota3){
             let suma = nota1 + nota2 + nota3
             let media = (suma) / 3
             return media
         }
 
+        //VISUALIZAR
         function Visualizar (){
             document.write("La media es: " + media(nota1, nota2, nota3))
         }

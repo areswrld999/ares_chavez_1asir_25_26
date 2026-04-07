@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Programa principal
+
+var nota = parseInt(prompt("Dame tu nota"))
+Visualizar (Proceso(nota))
+
+
+//proceso
+
+function Proceso (nota){
+    var resultado = "Valor no válido";
+
+    if (Number(nota) == nota) {
+        if (nota >= 0 && nota <= 10) {
+            if (nota < 3) {
+                resultado = "Muy deficiente";
+            }
+            else if (nota < 5) {
+                resultado = "Insuficiente";
+            } else if (nota < 6) {
+                resultado = "Suficiente";
+            } else if (nota < 7) {
+                resultado = "Bien";
+            } else if (nota < 9) {
+                resultado = "Notable";
+            } else if (nota >= 9) {
+                resultado = "Sobresaliente";
+            }
+        } else {"Nota no valida"}
+    }
+    return resultado;
+}
+
+function Visualizar(resultado){
+    document.write("Tu nota es: " + resultado)
+}
+
+</script>
+</body>
+</html>
