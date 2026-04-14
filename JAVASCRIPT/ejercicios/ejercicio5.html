@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nDia = parseInt(prompt("Ingrese numero"))
+        visualizar (proceso(nDia))
+
+        function proceso(nDia){
+            switch (nDia){
+                case 1:
+                    return nDia = " Es Domingo"  //NO hace falta poner la variable para modificarla
+                case 2:
+                    return " Es Lunes" //ESTA ES UNA MEJOR PRACTICA YA QUE NO MODIFICA LA VARIABLE YA QUE SOLO ES NECESARIO DEVOLVER EL TEXTO CON RETURN
+                case 3:
+                    return " Es Martes"
+                case 4:
+                    return " Es Miercoles"
+                case 5:
+                    return " Es Jueves"
+                case 6:
+                    return " Es Viernes"
+                case 7:
+                    return " Es Sabado"
+                default: 
+                    return "No es un día de la semana"
+            }
+        };
+
+        function visualizar (resul){
+            document.write(resul)
+        };
+    </script>
+</body>
+</html>

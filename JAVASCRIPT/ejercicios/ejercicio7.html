@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let precio = parseFloat(prompt("Ingrese precio")) // usamos parsefloat porque devuelve resultado con decimales perfecto para precio,pesos etc.
+        let tipoCliente = prompt("Ingrese tipo de cliente")
+        visualizar (proceso(tipoCliente,precio))
+
+
+        function proceso (tipoCliente,precio){
+            //let precioFinal NO HACE FALTA PONER UNA VARIABLE  
+            if (tipoCliente == "normal"){
+                return precio
+            }
+            else if (tipoCliente == "frecuente"){
+                return precio - (precio * 0.10)
+            }
+            else if (tipoCliente == "vip"){
+                return precio - (precio * 0.20)
+            }
+            else{
+                return "No es ningun tipo de cliente"
+            }
+        }
+
+        function visualizar (resul){
+            document.write("Su precio final es : " + resul + "€")
+        };
+    </script>
+</body>
+</html>

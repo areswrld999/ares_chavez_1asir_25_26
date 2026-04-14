@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("Ingrese numero 1"))
+        let num2 = parseInt(prompt("Ingrese numero 2"))
+        let operacion = prompt("Ingrese que Operacion quiere")
+        visualizar (calcular(num1,num2,operacion));
+
+        function calcular(num1,num2,operacion){
+            switch (operacion){
+                case "+": return num1 + num2; 
+                case "-": return  num1 - num2; 
+                case "*": return  num1 * num2; 
+                case "/": return  num1 / num2;
+                default: "Operacion no valida" 
+            }
+        };
+
+        function visualizar (resul){
+            document.write("El resultado de la operación es: " + resul)
+        };
+    </script>
+</body>
+</html>

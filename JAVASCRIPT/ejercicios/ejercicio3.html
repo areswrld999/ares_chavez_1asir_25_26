@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let notaExamen = parseInt(prompt("Ingrese nota de examen"))
+        visualizar (calcularNota(notaExamen))
+
+        function calcularNota (notaExamen) {
+            if (notaExamen < 0 || notaExamen > 10){
+                return "Nota erronea"
+            }
+            else if (notaExamen <= 4){
+                return "Tienes un suspenso"
+            }
+            else if (notaExamen <= 6){
+                return "Estas aprobado"
+            }
+            else if (notaExamen <= 8){
+                return "Tienes un notable"
+            }
+            else if (notaExamen <= 10){
+                return "Tienes un sobrasaliente"
+            }
+            else{
+                return "Nota erronea"
+            }
+        }
+        function visualizar (resul){
+            document.write(resul)
+        }
+    </script>
+</body>
+</html>
