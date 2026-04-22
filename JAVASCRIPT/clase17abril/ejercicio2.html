@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pedir un numero repetidamente siempre y cuando el numero tecleado sea mayor que el numero anterior. en el momento que se rompa la secuencia visualizar cuantos numeros tengo tecleados y cuales
+
+        //proceso
+
+        function Proceso (tab_numeros){
+            let sw = 0
+            while(sw == 0){
+                let numero = parseInt(prompt(""))
+                i = 0
+                if (numero < tab_numeros[i]){
+                    sw = 1
+                }
+                else {
+                    tab_numeros.push(numero)
+                }
+            }
+            i++
+            return 
+        }
+
+        function Visualizar(dato){
+            document.write(dato)
+        }
+
+        //programa principal
+
+        let tab_numeros= []
+        resul = Proceso()
+        Visualizar (dato)
+    </script>
+</body>
+</html>
+
+//pedir numeros repetidamente hasta acertar una clave numerica, por cada numero introducido no acertado se le dara al usuario un mensaje como pista para decirle si el numero introducido es menor o mayor. Una vez acertado el numero visualizar las ocasiones que ha necesitado para acertarlo

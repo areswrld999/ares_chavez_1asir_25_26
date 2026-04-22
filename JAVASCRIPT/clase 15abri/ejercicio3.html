@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //Visualizar numero enteros del 1 en adelante, hasta que el numero introducido sea mayor que 100 y multiplo de 7. En ese momento que se encuentre el numero visuali
+
+
+    <script>
+
+function Visualizar (){
+            let sw = 0
+            let numero = 1
+            while(sw == 0){
+                if (numero > 100 && numero % 7 == 0){
+                    sw = 1
+                }
+                else{
+                    document.write (numero)
+                    numero++;
+                }
+            }
+            return numero
+        }
+
+        // programa principal
+
+        Visualizar()
+
+    </script>
+</body>
+</html>
+
+

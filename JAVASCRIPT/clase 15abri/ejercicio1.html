@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        //Funcion
+        function Proceso (){
+            let conta = 0, suma = 0, sw = 0;
+            while (sw == 0){
+                nota=parseInt(prompt("Dame nota: "));
+                if(nota == -99){
+                    sw = 1;
+                } else {
+                    suma = suma + nota;
+                    conta ++
+                }
+            }
+            return suma / conta;
+        }
+
+        function Visualizar (media){
+            alert(media)
+        }
+
+        //PROGRAMA PRINCIPAL
+
+        resul = Proceso()
+        Visualizar(resul)
+
+    </script>
+</body>
+</html>

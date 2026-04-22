@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // Se piden notas repetidas el usuario hasta que el usuario meta -99, visualizar todas las notas introducidas
+
+
+    //programa principal
+
+
+        function Proceso (){
+            let sw = 0
+            let notas = []
+            while(sw == 0){
+                let nota = parseInt(prompt("Ingrese Nota"))
+                if (nota == -99){
+                    sw = 1
+                }
+                else{
+                    notas.push(nota)
+                }
+            }
+            return notas
+        }
+
+        function Visualizar(tab){
+            document.write(tab)
+        }
+
+
+        // programa principal
+
+        resul = Proceso()
+        Visualizar(resul)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

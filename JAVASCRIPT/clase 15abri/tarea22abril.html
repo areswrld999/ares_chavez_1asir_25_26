@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Programa Principal
+        let clave = 67;
+        visualizar(Proceso(clave));
+
+        // Proceso
+        function Proceso(clave) {
+            let intentos = 0;
+            let sw = 0;
+
+            while (sw == 0) {
+                let numero = parseInt(prompt("Adivina el número:"));
+                intentos++;
+
+                if (numero < clave) {
+                    alert("El número es mayor");
+                } else if (numero > clave) {
+                    alert("El número es menor");
+                } else {
+                    sw = 1;
+                }
+            }
+
+            return intentos;
+        }
+
+        // Visualizar
+        function visualizar(intentos) {
+            document.write("¡Acertaste! Necesitaste " + intentos + " intentos");
+        }
+    </script>
+</body>
+</html>

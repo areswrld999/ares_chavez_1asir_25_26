@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Programa Principal
+        let tab1 = [2,4,6,8,10]
+        let tab2 = [2,4,6,8,10]
+        visualizar(tab1, tab2)
+
+        // Proceso
+        function visualizar(tab1, tab2) {
+            let sw = 0;
+            let i = 0;
+
+            while (sw == 0 && i < tab1.length) {
+                if (tab1[i] != tab2[i]) {
+                    sw = 1;
+                }
+                i++;
+            }
+
+            if (sw == 0) {
+                document.write("Los arrays son iguales");
+            } else {
+                document.write("Los arrays son diferentes");
+            }
+        }
+    </script>
+</body>
+</html>

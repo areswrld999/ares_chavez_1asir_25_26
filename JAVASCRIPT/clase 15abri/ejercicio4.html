@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    /*declarar un array con valores numericos, si el array esta ordenado ascendentemente si o no. Utilizar el sw*/
+
+    <script>
+
+        function Proceso (tab_numero){
+            let salir = 0, i=0, ordenado = "si";
+            while (salir == 0){
+                if (i < tab_numero.length){
+                    salir = 1
+                } else {
+                    if (tab_numero[i]> tab_numero[i+1]){
+                        ordenado="no"
+                        salir = 1
+                    } else {
+                        i++
+                    }
+                }
+            }
+            return ordenado; 
+
+        }
+
+        function Visualizar(dato){
+            if (dato == "si"){
+                alert("El array esta ordenado")
+
+            }else{
+                alert("El array no esta ordenado")
+            }
+        }
+
+
+
+
+        //programa principal
+
+        resul=Proceso()
+        Visualizar(dato)
+
+        tab_numero = [2,3,4,10,20,40]
+    </script>
+</body>
+</html>
