@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Proceso(mat_sueldos){
+            let mayorMedia = 0
+            let nombreMayor = ""
+
+            for(let i = 0; i < mat_sueldos.length; i++){
+                let sum = 0
+                for(let k = 1; k < mat_sueldos[i].length; k++){
+                    sum += mat_sueldos[i][k]
+                }
+                let media = sum / (mat_sueldos[i].length - 1)
+
+                if(media > mayorMedia){
+                    mayorMedia = media
+                    nombreMayor = mat_sueldos[i][0]
+                }
+            }
+            Visualizar (nombreMayor,mayorMedia)
+        }
+
+        function Visualizar(nombreMayor,mayorMedia){
+            document.write("El empleado con mayor media es: " + nombreMayor + " con una media de: " + mayorMedia + "<br>")
+
+        }
+
+        let mat_sueldos = [
+            ["paco", 800, 2300, 1900],
+            ["manuel", 1500, 4000],
+            ["juanito", 900, 3200, 500]
+        ];
+
+        Proceso(mat_sueldos)
+        
+    </script>
+</body>
+</html>

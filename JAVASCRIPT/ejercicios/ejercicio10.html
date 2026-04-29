@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Proceso
+
+        function Proceso(){
+            let sw = 0
+let numero = parseInt(prompt("Ingrese Numero")) // primer número antes del while
+let mayor = numero
+let menor = numero
+
+while (sw == 0){
+    numero = parseInt(prompt("Ingrese Numero")) //  pide nuevo número cada vuelta
+    if (numero == 0){
+        sw = 1
+    } else if (numero > mayor){
+        mayor = numero
+    } else if (numero < menor){
+        menor = numero
+    }
+}
+            Visualizar (menor,mayor)
+        }
+        function Visualizar(menor,mayor){
+            document.write("El numero mayor es: " + mayor + " Y el numero menor es: " + menor)
+        }
+
+        Proceso()
+    </script>
+</body>
+</html>
+

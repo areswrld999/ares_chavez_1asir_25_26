@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Visualizar(mat_sueldos){
+            for(let i = 0; i < mat_sueldos.length; i++){
+                let sum = 0
+                for(let k = 1; k < mat_sueldos[i].length; k++){
+                    sum += mat_sueldos[i][k]
+                }
+                let media = sum / (mat_sueldos[i].length-1)
+                document.write("El empleado " + mat_sueldos[i][0] + " ha ganado de media: " + media + "<br>")
+            }
+        }
+
+        let mat_sueldos = [
+            ["paco", 800, 2300, 1900],
+            ["manuel", 1500, 4000],
+            ["juanito", 900, 3200, 500]
+        ];
+
+        Visualizar(mat_sueldos);
+    </script>
+</body>
+</html>
