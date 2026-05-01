@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //programa principal
+
+        function Proceso (){
+            let opcionArray = parseInt(prompt("Ingrese numero de array"))
+            switch (opcionArray){
+                case 1: array = [10, 20, 30, 40, 50]; break
+                case 2: array = [5, 15, 25, 35, 45]; break
+            }
+            let opcionOperacion = parseInt(prompt("Ingrese operacion ( 1 = suma, 2 = nMayor, 3 = media ):"))
+            let suma = 0
+            let mayor = 0
+            let media = 0
+            
+            switch (opcionOperacion){
+                case 1: for (i=0; i < array.length;i++)
+                suma += array[i]
+                return suma
+
+                case 2: for (i=0; i < array.length; i++){  // ✅ llaves necesarias
+                if (mayor < array[i]){
+                mayor = array[i]
+                }
+            }
+                return mayor
+                
+                case 3: for (i=0; i < array.length;i++)
+                suma += array[i]
+                media = suma / (array.length)
+                return media
+            }
+            
+        }
+
+        function Visualizar (resul){
+            document.write("El resultado es: " + resul )
+        }
+
+        Visualizar(Proceso())
+
+
+    </script>
+</body>
+</html>
