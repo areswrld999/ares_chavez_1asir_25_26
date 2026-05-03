@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Proceso
+
+        function Proceso(alumnos){
+            
+            for(i = 0; i < alumnos.length; i++){
+            let suma = 0
+            let media = 0
+            let alumno
+            for(k = 1; k < alumnos[i].length; k++){//las notas empiezan en la posicion 1 del array, por lo que hay que poner k=1
+                suma += alumnos[i][k]
+            }
+            media = suma / (alumnos[i].length-1)
+            alumno = alumnos[i][0]
+            let aprobado 
+            if (media >= 5){
+                aprobado = "Aprobado"
+            } else{
+                aprobado = "Suspenso"
+            }
+            Visualizar(aprobado,media,alumno)   //EL IF Y TODO DEBE DE ESTAR DENTRO DEL BUCLE, para que el if se repita con cada alumno, sino lo dejo fuera como hice antes solo se ejecuta para el ultimo alumno
+            }
+        }
+
+        function Visualizar (aprobado,media,alumno){
+            document.write("El alumno: " + alumno + " tiene de media: " + media + " por lo tanto esta: " + aprobado + "<br>")
+
+        }
+
+
+        
+        let alumnos = [
+    ["Juan", 5, 8, 7, 6],
+    ["Maria", 9, 10, 8, 9],
+    ["Pedro", 4, 5, 3, 6]
+]
+        Proceso(alumnos)
+    </script>
+</body>
+</html>
