@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Proceso (equipos){
+            let equipoMayor = ""
+            let mayorGoles = 0
+            for(let i = 0; i < equipos.length;i++){ 
+            let nombre = ""
+            let totalGoles = 0
+            let mediaGoles = 0
+            nombre = equipos[i][0]
+            for(let k = 1; k < equipos[i].length;k++){
+                totalGoles += equipos[i][k]
+                }
+                mediaGoles = totalGoles / (equipos[i].length-1)
+                if (mayorGoles <= totalGoles){
+                    equipoMayor = nombre
+                    mayorGoles = totalGoles
+                    }
+                    document.write("El equipo " + nombre + " tiene en total "+ totalGoles + " goles, y una media de goles de " + mediaGoles + "<br>")
+            } 
+            document.write("El equipo con mas goles en total es " + equipoMayor + " y el total de goles fue " + mayorGoles)
+        }
+
+        let equipos = [
+    ["RealMadrid", 3, 5, 2, 4],
+    ["Barcelona", 1, 6, 3, 2],
+    ["Atletico", 2, 1, 4, 3]
+]
+
+        Proceso(equipos)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
