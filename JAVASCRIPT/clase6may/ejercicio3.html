@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function Proceso(alumno){
+    let suma = 0;
+
+    for(let j = 1; j < alumno.length; j++){
+        suma += alumno[j];
+    }
+
+    let media = suma / (alumno.length - 1);
+    return [alumno[0], media];
+}
+
+function Visualizar(alumnos){
+    let mayorMedia = -1;
+    let mejorAlumno = "";
+
+    for (let i = 0; i < alumnos.length; i++){
+        let resultado = Proceso(alumnos[i]);
+
+        document.write(resultado[0] + " tiene media " + resultado[1] + "<br>");
+
+        if (resultado[1] > mayorMedia){
+            mayorMedia = resultado[1];
+            mejorAlumno = resultado[0];
+        }
+    }
+
+    document.write("<br>El alumno con mayor media es " + mejorAlumno + " con " + mayorMedia);
+}
+
+let alumnos = [
+    ["Luis",7,8,9,5],
+    ["Pedro",7,8,9,5,1],
+    ["Maria",7,8,9,5,2,3]
+];
+
+Visualizar(alumnos);
+
+</script>
+</body>
+</html>
