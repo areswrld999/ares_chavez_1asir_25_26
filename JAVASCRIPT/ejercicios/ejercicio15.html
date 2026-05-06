@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ciudades = [
+    ["Madrid", 32, 35, 30, 28, 33, 31, 29],
+    ["Barcelona", 28, 27, 30, 26, 29, 28, 27],
+    ["Sevilla", 38, 40, 37, 39, 41, 38, 36]
+]
+
+function Proceso(ciudades){
+    let resultados = []
+    let mayorMedia = 0
+    let ciudad = ""
+    for (i=0;i<ciudades.length;i++){
+        let nombre = ciudades[i][0]
+        let suma = 0
+        let menorTemp = ciudades[i][1] //HAY QUE DECLARAR LAS TEMPS CON EL PRIMER VALOR PARA QUE ASI PUEDA COMPRAR CORRECTAMENTE, SINO EL MENOR QUEDARA A 0
+        let mayorTemp = ciudades[i][1]
+        for(let k=1;k<ciudades[i].length;k++){
+            suma += ciudades[i][k]
+            if (menorTemp > ciudades[i][k]){
+                menorTemp = ciudades[i][k]
+            }
+            if (mayorTemp < ciudades[i][k]){
+                mayorTemp = ciudades[i][k]
+            }
+        }
+        let media = suma / (ciudades[i].length-1) //NO SE TE OLVIDE EL LENGTH
+
+
+        if (mayorMedia < media){
+            mayorMedia = media
+            ciudad = ciudades[i][0]
+
+        }   resultados.push([nombre,media,menorTemp,mayorTemp]) //EL PUSH DEBE IR FUERA DEL IF PARA QUE SOLO NO SE QUEDE DENTRO DEL IF DEL MAYOR
+        
+    } return [resultados,ciudad,mayorMedia]
+}
+
+function Visualizar (dato){
+    let resultados = dato[0]
+    let ciudad = dato[1]
+    let mayor = dato[2] //DESGLOSAMOS EL RETURN PARA QUE SEA MAS LEGIBLE DE LEER Y USAR
+
+    for(i=0;i<resultados.length;i++){
+        document.write("La ciudad " + resultados[i][0] + " tiene de media " + resultados[i][1] +
+        " la temperatura minima es "+ resultados[i][2]+ " la maxima es " + resultados[i][3] + "<br>")
+    }
+    document.write("La ciudad de " + ciudad + " tiene la mayor media de temperatura con " + mayor)
+}
+
+Visualizar (Proceso(ciudades))
+    </script>
+</body>
+</html>
