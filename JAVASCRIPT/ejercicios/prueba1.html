@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alumnos = [["Cayetano",5,6,2,9],
+                    ["Luis",8,9,2],
+                    ["Ana",9,4,2,6]]
+
+        function Proceso(alumnos){
+            let resultados = []
+            let mayorMedia = 0
+            let nombreMayor = ""
+
+            for(let i=0; i<alumnos.length; i++){
+                let suma = 0
+                for(let k=1; k<alumnos[i].length; k++){
+                    suma += alumnos[i][k]
+                }
+                let media = suma / (alumnos[i].length-1)
+                resultados.push([alumnos[i][0], media])
+
+                if(media > mayorMedia){
+                    mayorMedia = media
+                    nombreMayor = alumnos[i][0]
+                }
+            }
+            return [resultados, nombreMayor, mayorMedia]  // devuelve todo junto
+        }
+
+        function Visualizar(datos){
+            let resultados = datos[0]    // el array con todos los alumnos
+            let nombreMayor = datos[1]   // el nombre del mayor
+            let mayorMedia = datos[2]    // la media mayor
+
+            for(let i=0; i<resultados.length; i++){
+                document.write(resultados[i][0] + " tiene de media: " + resultados[i][1] + "<br>")
+            }
+            document.write("El alumno con mayor media es: " + nombreMayor + " con una media de: " + mayorMedia)
+        }
+
+        Visualizar(Proceso(alumnos))
+    </script>
+</body>
+</html>
